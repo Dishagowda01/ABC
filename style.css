@@ -1,0 +1,197 @@
+/* ===============================
+   RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: url("bg.jpeg") center/cover no-repeat fixed;
+}
+
+
+/* ===============================
+   INTRO SCREEN
+================================ */
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glow {
+  font-size: 2.6rem;
+  color: white;
+  text-shadow: 0 0 10px #f36f87, 0 0 20px #ff758f;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.intro-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+#startBtn,
+.open-btn {
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+#startBtn {
+  background: #f7637e;
+  color: white;
+}
+
+.open-btn {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 20px rgba(255,255,255,0.8);
+}
+
+
+/* ===============================
+   REELS / SLIDESHOW (FIXED)
+================================ */
+.reels {
+  position: fixed;
+  inset: 0;
+ background: url("bg.jpeg") center/cover no-repeat fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* image + video fit screen perfectly */
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps full media visible */
+  display: none;
+}
+
+
+/* ===============================
+   TEXT INSIDE VIDEO (CLEAN)
+================================ */
+.video-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(0,0,0,0.9);
+  z-index: 10;
+  max-width: 90%;
+  white-space: pre-line; /* important for multi-line text */
+}
+
+
+
+/* ===============================
+   FINAL MESSAGE BACKGROUND
+================================ */
+.final-message {
+  position: fixed;
+  inset: 0;
+
+  /* ✅ your bg.jpg here */
+  background: url("bg.jpg") center/cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ===============================
+   MESSAGE BOX
+================================ */
+.message-box {
+  text-align: center;
+  max-width: 80%;
+  padding: 40px 30px;
+
+  color: rgb(14, 12, 12);
+  font-size: 1.4rem;
+  line-height: 1.9;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* typing lines */
+.type-line {
+  opacity: 0;
+  font-size: 18px;
+}
+
+
+/* ===============================
+   STARS
+================================ */
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stars span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+
+/* ===============================
+   COMMON
+================================ */
+.hidden {
+  display: none;
+}
