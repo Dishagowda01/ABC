@@ -30,20 +30,20 @@ openBtn.onclick = () => {
    SLIDES DATA
 ================================ */
 const slides = [
-  { type: "img", src: "photo1.jpeg" },
-  { type: "img", src: "photo2.jpeg" },
-  { type: "video", src: "video1.mp4" },
-  { type: "img", src: "photo3.jpeg" },
-  { type: "img", src: "photo4.jpeg" },
-  { type: "img", src: "photo5.jpeg" },
-  { type: "img", src: "photo6.jpeg" },
-  { type: "video", src: "video3.mp4" },
-  { type: "img", src: "photo7.jpeg" },
-  { type: "img", src: "photo8.jpeg" },
-  { type: "video", src: "video4.mp4" },
-  { type: "img", src: "photo9.jpeg" },
-  { type: "img", src: "photo10.jpeg" },
-  { type: "img", src: "photo11.jpeg" }
+  { type: "img", src: ",photo1.jpeg" },
+  { type: "img", src: ",photo2.jpeg" },
+  { type: "video", src: ",video1.mp4" },
+  { type: "img", src: ",photo3.jpeg" },
+  { type: "img", src: ",photo4.jpeg" },
+  { type: "img", src: ",photo5.jpeg" },
+  { type: "img", src: ",photo6.jpeg" },
+  { type: "video", src: ",video3.mp4" },
+  { type: "img", src: ",photo7.jpeg" },
+  { type: "img", src: ",photo8.jpeg" },
+  { type: "video", src: ",video4.mp4" },
+  { type: "img", src: ",photo9.jpeg" },
+  { type: "img", src: ",photo10.jpeg" },
+  { type: "img", src: ",photo11.jpeg" }
 ];
 
 let index = 0;
@@ -171,5 +171,6 @@ for (let i = 0; i < 50; i++) {
   star.style.animationDelay = Math.random() * 5 + "s";
   starsContainer.appendChild(star);
 }
+
 
 
